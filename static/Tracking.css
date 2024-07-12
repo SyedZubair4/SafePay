@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+    --primary-color: #3a719e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(190deg, #3a719e 50%, #f1e7c9 50%);
+    height: 100vh;
+    color: #f1e7c9;
+}
+/* Genral */
+.container {
+    padding: 0 8.4rem;
+}
+
+.img-w {
+    width: 100%;
+    height: auto;
+}
+/* Nav */
+header {
+    background: var(--primary-color);
+    position: relative;
+    box-shadow: 0 4px 17px rgb(255 255 255 / 10%);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    opacity: 0;
+    animation: leftSideAni 1s ease forwards;
+
+}
+
+.logo a {
+    color: #f1e7c9;;
+    text-decoration: none;
+}
+
+/* 
+#click {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.mode i {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    opacity: 0;
+    animation: rightSideAni 1.5s ease forwards;
+} */
+
+/* Nav End */
+
+/* Section 1 */
+
+.main {
+    padding: 6rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
+    row-gap: 2rem;
+    column-gap: 6rem;
+    align-items: center;
+}
+.main h3 {
+    color: #f1e7c9;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: topSideAni 1s ease forwards;
+}
+/* .main h1 {
+    color: var(--primary-color);
+    font-size: 4rem;
+    font-weight: 600;
+    opacity: 0;
+    animation: leftSideAni 1s ease forwards;
+    animation-delay: 1s;
+} */
+.orders{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    opacity: 0;
+    animation: topSideAni 1s ease forwards;
+}
+.order{
+    border-radius: 2rem;
+    width: 30vw;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: medium;
+    /* background-color: #17151c; */
+    /* border-radius: 2rem; */
+    /* color: rgb(113, 19, 19); */
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    perspective: 1000px;
+    cursor: pointer;
+
+}
+
+.order a{
+    text-decoration: none;
+    color:#f1e7c9;
+}
+
+#ved{
+    color: #000;
+}
+#order4{
+    border: 10px solid #3a719e;
+}
+/* #order5{
+    color: black;
+} */
+.order:hover{
+    /* background-color: #3a719e; */
+    transform: scale(1.10);
+    /* background-color: #13072f; */
+    /* border-radius: 3rem; */
+    box-shadow: rgba(0, 0, 0, 0.925) 0px 20px 50px -25px
+    
+}
+/* Section 1 End */
+
+/* Animation */
+@keyframes leftSideAni {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes navani {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes topSideAni {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes SocialAni {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 4.4rem;
+    }
+    .main h3 {
+        color: #000;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 1.6rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    body {
+        height: auto;
+    }
+    header {
+        height: auto;
+        background-color: var(--primary-color);
+    }
+
+    ul {
+        background: var(--primary-color);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 3.4rem;
+        left: -100%;
+        z-index: 111111;
+    }
+
+    .menu {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    #click:checked~ul {
+        left: 0%;
+        transition: all 0.3s ease;
+    }
+    .images {
+        width: 100%;
+        margin: auto;
+    }
+
+    .main {
+        margin-top: 2rem;
+    }
+}

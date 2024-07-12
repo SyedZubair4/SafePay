@@ -1,0 +1,240 @@
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Safe Pay</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'landingPage/favicon.png' %}" rel="icon">
+  <!-- <link href="{% static 'EwalletImageS.png' %}" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'EwalletPageAos.css' %}" rel="stylesheet">
+  <link href="{% static 'EwalletBootStrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'EwalletBootStrapIcons.css' %}" rel="stylesheet">
+  <link href="{% static 'EwalletGlightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'EwalletRemixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'EwalletSwiperBundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'EwalletStyle.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="{% static 'EwalletSafeLogo.png' %}" alt="">
+        <!-- <span>Safe Pay</span> -->
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Wallet</a></li>
+          <li><a class="nav-link scrollto" href="#about">View Transactions</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Track Your Order</a></li> -->
+<!-- 
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+          <li><a class="getstarted scrollto" href="backToHome">Go Back</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center" style="background: url('{% static 'heroBackground.png' %}') top center no-repeat;" >
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">E-Wallet</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Safe Pay</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            
+            <div class="text-center text-lg-start">
+              <a class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Wallet Balance = Rs.7133</span>
+                <!-- <i class="bi bi-arrow-right"></i> -->
+              </a>
+            </div>
+            <div class="text-center text-lg-start">
+              <a class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Successful Transaction = Rs.59,498</span>
+                <!-- <i class="bi bi-arrow-right"></i> -->
+              </a>
+            </div>
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>View Transactions</span>
+                <!-- <i class="bi bi-arrow-right"></i> -->
+              </a>
+            </div>
+            <br>
+            <br>
+            <h4 data-aos="fade-up" data-aos-delay="400">Don't Worry, Your Wallet Balance is Safe with us.</h4>
+            <h6 data-aos="fade-up" data-aos-delay="400">We transfer the money to the provider only when there is confirmation from the user regarding the delivery of the product. Till then your money is kept safe in our wallet.</h6>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'EwalletImagePay.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tran1">
+                  <span class="num">Muscle Blaze High Protien Oats</span>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                  -Rs.1094
+                </button>
+              </h3>
+              <div id="tran1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div class="accordion-body">
+                  <span>To, Bright LifeCare Pvt Ltd.</span>
+                  &nbsp;&nbsp;
+                  <span>Transaction Id:406802175872</span>
+                  <p>Status : Pending (Money Held In Wallet)</p>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tran2">
+                  <span class="num">Amazon India Boat Smart Watch</span>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                  -Rs.3,990
+                </button>
+              </h3>
+              <div id="tran2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div class="accordion-body">
+                  <span>To, Amazon India Pvt Ltd.</span>
+                  &nbsp;&nbsp;
+                  <span>Transaction Id:806802177872</span>
+                  <p>Status : Pending (Money Held In Wallet)</p>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tran3">
+                  <span class="num">Mamaearth Skin Care Kit</span>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                  -Rs.2049
+                </button>
+              </h3>
+              <div id="tran3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div class="accordion-body">
+                  <span>To, Mamaearth Pvt Ltd.</span>
+                  &nbsp;&nbsp;
+                  <span>Transaction Id:607902175872</span>
+                  <p>Status : Pending (Money Held In Wallet)</p>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tran4">
+                  <span class="num">Amazon India Apple iPhone 13</span>
+                   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                  -Rs.54,999
+                </button>
+              </h3>
+              <div id="tran4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div class="accordion-body">
+                  <span>To, Amazon India Pvt Ltd.</span>
+                  &nbsp;&nbsp;
+                  <span>Transaction Id:506802561758</span>
+                  <p>Status : Transaction Successful</p>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tran5">
+                  <span class="num">Boat Headset Nirvana 771ANC </span>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                  -Rs.4499
+                </button>
+              </h3>
+              <div id="tran5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div class="accordion-body">
+                  <span>To, Boat Ahead Pvt Ltd.</span>
+                  &nbsp;&nbsp;
+                  <span>Transaction Id:709502175878</span>
+                  <p>Status : Transaction Successful</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{% static 'EwalletImageMain.png' %}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span> Safe Pay</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+          Designed by <a href="#">SafePay Team.</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'EwalletPureCounterVanilla.js' %}"></script>
+  <script src="{% static 'EwalletAos.js' %}"></script>
+  <script src="{% static 'EwalletBootStrap.bundle.min.js' %}"></script>
+  <script src="{% static 'EwalletGlightbox.min.js' %}"></script>
+  <script src="{% static 'EwalletIsotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'EwalletSwiperBundle.min.js' %}"></script>
+  <script src="{% static 'EwalletValidate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'EwalletJS.js' %}"></script>
+
+</body>
+
+</html>
+
+{% endblock %}

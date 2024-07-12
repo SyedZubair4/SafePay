@@ -1,0 +1,63 @@
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'Tracking.css' %}">
+    <title>Orders</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">Orders / Tracking</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="main">
+            <div class="detail">
+                <h3>Your Orders</h3>
+                <br>
+                <div class="orders">
+                    <div class="order" id="order4">
+                        <a href="redirectToTrackTwo">Order ID  =  OD45345345435</a>
+                    </div>
+                    <div class="order" id="order4">
+                        <a href="redirectToTrackTwo">Order ID  =  OD56546546566</a>
+                    </div>
+                    <div class="order" id="order4">
+                        <a href="redirectToTrackTwo">Order ID  =  OD35345546468</a>
+                    </div>
+                    <div class="order" id="order4">
+                        <a href="redirectToTrackTwo">Order ID  =  OD45634565569</a>
+                    </div>
+                    <div class="order" id="order4">
+                        <a href="redirectToTrackTwo">Order ID  =  OD65656546510</a>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h3 id="ved">Click on your order to display all the tracking details.</h3>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,458 @@
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SafePay Home-Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'landingPage/favicon.png' %}" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'bootstrapIcons.css' %}" rel="stylesheet">
+  <link href="{% static 'aos.css' %}" rel="stylesheet"> 
+  <link href="{% static 'glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'swiperBundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'main.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">SafePay@support.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>example phone number</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="#hero" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>SafePay<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <h3 style="color:yellow; font-size:1rem;">Hi! {{username}}</h3>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">Defining Problem</a></li>
+          <li><a href="#services">Scalability</a></li>
+          <li><a href="redirectToEwallet">e-wallet</a></li>
+          <li><a href="redirectToTrackOne">Track Your Order</a></li>
+          
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2>Welcome to <span>Safe Pay</span></h2>
+          <p>Elevating Transactions to the Pinnacle of Security and Sophistication.</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started">Get Started</a>
+            <a href="{% static 'SAFEPAY.mp4' %}" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="{% static 'heroImg.svg' %}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-boxes position-relative">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-easel"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Secure Online Transactions</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-gem"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">User Controlled Payment Release</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-geo-alt"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Fraud Prevention In Online Shopping</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-command"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Transparent and Trustworthy Transactions</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Defining Problem Statement</h2>
+          <p>We are addressing the epidemic of online scams, SafePay stands as the fortress, ensuring Secure,trustworthy digital transactions
+            for fraud free future.
+          </p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <h3>Innovative Solution</h3>
+            <img src="{% static 'homePage/about.jpg' %}" class="img-fluid rounded-4 mb-4" alt="">
+            <p>SafePay redefines online transactions by introducing a groundbreaking feature-funds are held temporarily on our server. This ensures that money doesn't reach the sender's bank until the recipient confirms receipt of the promised product, offering an unprecedented level of control to users. This innovative model serves as a shield against scams, instilling trust in digital exchanges and reshaping the landscape of secure online commerce.</p>
+            <p>In addition to enhancing security, SafePay revolutionizes the way we approach online shopping. Users now have the power to release funds only after they've verified the receipt of the product, providing an extra layer of protection against common online scams. SafePay stands as a beacon of reliability, marking a pivotal shift towards a safer, more transparent era in digital transactions.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                The key features of our website are : 
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> User-Controlled Transactions</li>
+                <li><i class="bi bi-check-circle-fill"></i>Temporary Funds Holding</li>
+                <li><i class="bi bi-check-circle-fill"></i>Fraud Prevention in Online Shopping by using out own tracking method which has all the photos of the product before reaching the consumer.</li>
+              </ul>
+              <p>
+                Users have the power to release funds only after they have received and verified the desired product or service. It adds an extra layer of security.
+                Introducing a secure fund-holding mechanism, allowing recipients to confirm receipt before money is transferred.
+                SafePay enhances online shopping security by enabling users to release funds only upon satisfaction, guarding against scams and ensuring a reliable experience.
+              </p>
+
+              <div class="position-relative mt-4">
+                <img src="{% static 'homePage/about2.jpg' %}" class="img-fluid rounded-4" alt="">
+                <a href="{% static 'SAFEPAY.mp4' %}" class="glightbox play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6">
+            <img src="{% static 'statsImg.svg' %}" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong> till date.</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="241" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Successful Transactions</strong> made till date.</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="103" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong> have been provided</p>
+            </div><!-- End Stats Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Stats Counter Section -->
+
+    
+
+    <!-- ======= Our Services Section ======= -->
+    <section id="services" class="services sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Scalability</h2>
+          <p>Scaling Trust, Empowering Transactions, and Elevating Your Digital Experience.</p>
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-activity"></i>
+              </div>
+              <h3>User Volume</h3>
+              <p>This level of scalability focuses on accommodating varying numbers of users. SafePay will be designed to handle growth in user registrations, transactions, and overall user activity. As the DataBase expands, the system will seamlessly scale to maintain performance and responsiveness.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <h3>Transaction Volume</h3>
+              <p>Scalability in terms of transaction volume is crucial for SafePay. As the number of transactions increases, the system will be able to handle the load efficiently. This involves optimizing backend processes, database management, and communication channels to ensure smooth and reliable transaction processing.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-easel"></i>
+              </div>
+              <h3>Feature Expansion</h3>
+              <p>SafePay's scalability will extend to accommodate the introduction of new features and functionalities. As the platform evolves, the system architecture will be flexible enough to support these enhancements without compromising overall performance or user experience.</p>
+              
+            </div>
+          </div><!-- End Service Item -->
+
+          
+        </div>
+
+      </div>
+    </section><!-- End Our Services Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="content px-xl-5">
+              <h3>Frequently Asked <strong>Questions</strong></h3>
+              <p>
+                Here are some of the questions realted to our website and some questions asked by the users.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+
+            <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    <span class="num">1.</span>
+                    What is the Novelty of your idea?
+                  </button>
+                </h3>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                      SafePay's novelty lies in its revolutionary temporary fund holding system, reshaping how online transactions unfold. By securely storing funds until the recipient confirms product receipt, SafePay introduces a game-changing layer of control, shielding users from scams and fostering digital confidence. This departure from the norm is a breakthrough in securing online exchanges.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                    <span class="num">2.</span>
+                    Is our transaction workflow safe?
+                  </button>
+                </h3>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                      We have Developed a streamlined transaction workflow that includes the initiation of payments, temporary fund holding, and user-controlled release of funds. This workflow should be intuitive and user-friendly.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                    <span class="num">3.</span>
+                    How do we integrate the money after payment with banks?
+                  </button>
+                </h3>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                      We have established secure connections and integrations with banking systems to facilitate the actual transfer of funds once the user releases them. Implement industry-standard security measures to protect financial transactions.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                    <span class="num">4.</span>
+                    What does your website actually do?
+                  </button>
+                </h3>
+                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                      The receiver on receiving the product needs to confirm whether the product is as expected for the transaction process to proceed, whereas the sender awaits for the confirmation from the receiver regarding the product received. Once the receiver confirms, the money which was held at our server, will be released to senders bank.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
+                    <span class="num">5.</span>
+                    Is your website really capable of stopping these scams?
+                  </button>
+                </h3>
+                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Yes, we try our best to completely reduce these scandals to a great extent by using all kinds of tracking as well as secure payment methods.
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <!-- <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Impact</span>
+          </a>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> info@example.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div> -->
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span> Safe Pay</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+        Designed by <a href="#">SafePay Team.</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'aos.js' %}"></script>
+  <script src="{% static 'glightbox.min.js' %}"></script>
+  <script src="{% static 'purecounterVanilla.js' %}"></script>
+  <script src="{% static 'swiperBundle.min.js' %}"></script>
+  <script src="{% static 'isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'main.js' %}"></script>
+
+</body>
+
+</html>
+
+
+{% endblock %}

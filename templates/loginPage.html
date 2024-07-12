@@ -1,0 +1,105 @@
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="{% static 'LoginPage.css' %}">
+    <link href="{% static 'landingPage/favicon.png' %}" rel="icon">
+</head>
+<body style="
+background: linear-gradient(161.5deg,#d2001a,#7462ff,#f48e21,#23d5ab); 
+background-size: 300% 300%;
+animation: color 5.5s ease-in-out infinite;
+@keyframes color{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}"> 
+    <header>
+        <h1>Safe Pay</h1>
+        <nav>
+            <a href="redirectToLogin">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+            
+        </nav>
+    </header>
+    <div class="Form-box">
+        <form class="Login-form" method="POST" action="Login">
+            {% csrf_token %}
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" required name="username">
+                <label>Username</label>
+                <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="input-box">
+                <input type="password" required name="password">
+                <label>Password</label>
+                <ion-icon name="lock-closed-outline"></ion-icon>
+            </div>
+            <div class="checkbox">
+                <span>
+                    <input type="checkbox" id="login-checkbox" name="rememberMe">
+                    <label for="login-checkbox">Remember Me</label>
+                </span>
+                <h5>Forget password ?</h5>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+            <h5 class="Register-btn">Dont have an account ? Register</h5>
+
+            {% for message in messages %}
+            <h2 id="message" style="color:rgb(255, 157, 0);">{{message}}</h2>
+            {% endfor %}
+        </form>
+        <form class="Register-form" method="POST" action="Register">
+            {% csrf_token %}
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" required name="username" >
+                <label>Username</label>
+                <ion-icon name="person-outline"></ion-icon>
+            </div>
+            <div class="input-box">
+                <input type="text" required name="email">
+                <label>Email</label>
+                <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="input-box">
+                <input type="password" required name="password">
+                <label>Password</label>
+                <ion-icon name="lock-closed-outline"></ion-icon>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="register-checkbox">
+                <label for="register-checkbox">I agree to the terms & conditions</label>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+            <h5 class="Login-btn">Registered before ? Login</h5>
+
+            {% for message in messages %}
+            <h2 id="message" style="color:rgb(255, 157, 0);">{{message}}</h2>
+            {% endfor %}
+        </form>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="{% static 'LoginJS.js' %}"></script>
+
+
+</body>
+</html>
+
+{% endblock %}
